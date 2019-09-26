@@ -3,8 +3,9 @@ package com.fishinwater.notesofmvp.sample4;
 
 import android.graphics.Bitmap;
 
-import com.fishinwater.notesofmvpstudy.sample4.base.BasePresenter_4;
-import com.fishinwater.notesofmvpstudy.utils.HttpUtils;
+import com.fishinwater.notesofmvp.sample4.base.BasePresenter_4;
+import com.fishinwater.notesofmvp.utils.HttpUtils;
+
 
 /**
  * P 层

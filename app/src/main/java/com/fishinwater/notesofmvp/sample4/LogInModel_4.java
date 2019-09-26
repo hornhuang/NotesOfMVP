@@ -2,8 +2,8 @@ package com.fishinwater.notesofmvp.sample4;
 
 import android.graphics.Bitmap;
 
-import com.fishinwater.notesofmvpstudy.utils.HttpTask;
-import com.fishinwater.notesofmvpstudy.utils.HttpUtils;
+import com.fishinwater.notesofmvp.utils.HttpTask;
+import com.fishinwater.notesofmvp.utils.HttpUtils;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.BitmapCallback;
 
