@@ -3,7 +3,7 @@ package com.fishinwater.notesofmvp.sample2;
 
 import android.graphics.Bitmap;
 
-import com.fishinwater.notesofmvpstudy.utils.HttpUtils;
+import com.fishinwater.notesofmvp.utils.HttpUtils;
 
 /**
  * P 层

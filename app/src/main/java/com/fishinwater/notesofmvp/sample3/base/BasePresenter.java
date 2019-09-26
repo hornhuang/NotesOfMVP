@@ -1,6 +1,6 @@
 package com.fishinwater.notesofmvp.sample3.base;
 
-import com.fishinwater.notesofmvpstudy.sample3.LoginView_3;
+import com.fishinwater.notesofmvp.sample3.LoginView_3;
 
 /**
  * 存在巨大问题
