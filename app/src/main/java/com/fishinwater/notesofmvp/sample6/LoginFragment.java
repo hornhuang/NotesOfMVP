@@ -100,5 +100,4 @@ public class LoginFragment extends BaseFragment_6<LoginView_5, LoginPresenter_5>
     public LoginView_5 createView() {
         return this;
     }
-
 }
