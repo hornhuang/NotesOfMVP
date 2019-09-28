@@ -1,5 +1,6 @@
 package com.fishinwater.notesofmvp;
 
+import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,6 +8,8 @@ import android.view.View;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.fishinwater.notesofmvp.sample1.LoginPresenter;
 import com.fishinwater.notesofmvp.sample1.LoginView;
@@ -37,12 +40,13 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * V 层 就是我们的 activity
  */
-public class MainActivity extends BaseActivity<LoginView_5, LoginPresenter_5> implements LoginView_5 {
+// BaseActivity<LoginView_5, LoginPresenter_5>    implements LoginView_5
+public class MainActivity extends FragmentActivity {
 
     private final String TAG = "MainActivity";
 
-    @BindView(R.id.girl_pic)
-    ImageView mGirlPic;
+//    @BindView(R.id.girl_pic)
+//    ImageView mGirlPic;
 
     private LoginPresenter_4 loginPresenter;
 
@@ -50,7 +54,7 @@ public class MainActivity extends BaseActivity<LoginView_5, LoginPresenter_5> im
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+        //ButterKnife.bind(this);
     }
 
     /**
@@ -292,56 +296,51 @@ public class MainActivity extends BaseActivity<LoginView_5, LoginPresenter_5> im
      *
      * 解决方案： Activity 的抽象
      */
-    public void clickLogin(View v) {
-        getPresenter().login("1", "1");
-    }
+//    public void clickLogin(View v) {
+//        getPresenter().login("1", "1");
+//    }
+//
+//    @Override
+//    public void onLoginResult(String result) {
+//        // do sth...
+//    }
+//
+//    @Override
+//    public void onLoginBitmap(Bitmap result) {
+//        Observable.just(result)
+//                .subscribeOn(Schedulers.io()) // 指定 subscribe() 发生在 IO 线程
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(new Observer<Bitmap>() {
+//                    @Override
+//                    public void onSubscribe(Disposable d) {
+//
+//                    }
+//
+//                    @Override
+//                    public void onNext(Bitmap bitmap) {
+//                        mGirlPic.setImageBitmap(bitmap);
+//                    }
+//
+//                    @Override
+//                    public void onError(Throwable e) {
+//
+//                    }
+//
+//                    @Override
+//                    public void onComplete() {
+//
+//                    }
+//                });
+//    }
+//
+//    @Override
+//    public LoginPresenter_5 createPresenter() {
+//        return new LoginPresenter_5();
+//    }
+//
+//    @Override
+//    public LoginView_5 createView() {
+//        return this;
+//    }
 
-    @Override
-    public void onLoginResult(String result) {
-        // do sth...
-    }
-
-    @Override
-    public void onLoginBitmap(Bitmap result) {
-        Observable.just(result)
-                .subscribeOn(Schedulers.io()) // 指定 subscribe() 发生在 IO 线程
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<Bitmap>() {
-                    @Override
-                    public void onSubscribe(Disposable d) {
-
-                    }
-
-                    @Override
-                    public void onNext(Bitmap bitmap) {
-                        mGirlPic.setImageBitmap(bitmap);
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-
-                    }
-
-                    @Override
-                    public void onComplete() {
-
-                    }
-                });
-    }
-
-    @Override
-    public LoginPresenter_5 createPresenter() {
-        return new LoginPresenter_5();
-    }
-
-    @Override
-    public LoginView_5 createView() {
-        return this;
-    }
-
-    /**
-     * 第七步：MVP 设计 - 代码优化 - 第6步
-     *
-     * 扩张功能：fragment/LinearLayout
-     */
 }
