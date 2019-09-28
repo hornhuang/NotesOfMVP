@@ -338,4 +338,10 @@ public class MainActivity extends BaseActivity<LoginView_5, LoginPresenter_5> im
     public LoginView_5 createView() {
         return this;
     }
+
+    /**
+     * 第七步：MVP 设计 - 代码优化 - 第6步
+     *
+     * 扩张功能：fragment/LinearLayout
+     */
 }
