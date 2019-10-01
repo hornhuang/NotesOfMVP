@@ -38,9 +38,16 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
 /**
- * V 层 就是我们的 activity
+ * BaseActivity<LoginView_5, LoginPresenter_5>    implements LoginView_5
+ *
+ * 先前使用方法
  */
-// BaseActivity<LoginView_5, LoginPresenter_5>    implements LoginView_5
+
+/**
+ * V 层 就是我们的 activity
+ *
+ * @author fishinwater-1999
+ */
 public class MainActivity extends FragmentActivity {
 
     private final String TAG = "MainActivity";

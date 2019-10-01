@@ -13,6 +13,9 @@ import org.json.JSONObject;
 
 import okhttp3.Call;
 
+/**
+ * @author fishinwater-1999
+ */
 public class LogInModel {
 
     public static final String URL_GIRL = "http://gank.io/api/data/%E7%A6%8F%E5%88%A9";

@@ -11,6 +11,8 @@ import com.fishinwater.notesofmvp.utils.HttpUtils;
  * 特点一：持有 M 层的引用
  * 特点一：持有 V 层的引用
  * 对 M 层，V 层进行关联
+ *
+ * @author fishinwater-1999
  */
 public class LoginPresenter {
 

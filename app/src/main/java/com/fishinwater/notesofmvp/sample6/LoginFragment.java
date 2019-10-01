@@ -14,8 +14,6 @@ import android.widget.ImageView;
 import com.fishinwater.notesofmvp.R;
 import com.fishinwater.notesofmvp.sample5.LoginPresenter_5;
 import com.fishinwater.notesofmvp.sample5.LoginView_5;
-import com.fishinwater.notesofmvp.sample5.base.BasePresenter_5;
-import com.fishinwater.notesofmvp.sample5.base.BaseView_5;
 import com.fishinwater.notesofmvp.sample6.base.BaseFragment_6;
 
 import io.reactivex.Observable;
@@ -71,7 +69,8 @@ public class LoginFragment extends BaseFragment_6<LoginView_5, LoginPresenter_5>
     @Override
     public void onLoginBitmap(Bitmap result) {
         Observable.just(result)
-                .subscribeOn(Schedulers.io()) // 指定 subscribe() 发生在 IO 线程
+                // 指定 subscribe() 发生在 IO 线程
+                .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<Bitmap>() {
                     @Override
